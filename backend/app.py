@@ -53,6 +53,6 @@ def remove_item(name):
     return jsonify({"message": f"{name} removed."})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
 
     
