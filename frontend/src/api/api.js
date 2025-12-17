@@ -1,7 +1,7 @@
 // src/api/api.js
 import axios from "axios";
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://virtual-vanity.onrender.com";
 
 export async function getProductsByDrawer(drawer) {
     try {
@@ -23,8 +23,10 @@ export async function addProduct(product) {
     }
 }
 export async function deleteProduct(name) {
-    const response = await fetch(`http://127.0.0.1:5000/delete/${encodeURIComponent(name)}`, {
-        method: "DELETE"
-    });
+    const response = await fetch(
+        `${API_URL}/delete/${encodeURIComponent(name)}`,
+        { method: "DELETE" }
+    );
     return response.json();
 }
+
